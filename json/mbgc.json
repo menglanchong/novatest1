@@ -1,0 +1,51 @@
+{
+		"yongl":[
+					{
+						"name":"dangerLevel-select",
+						"type":"select",
+						"value":"1"
+			        },
+			        {
+						"name":"dangerType-select",
+						"type":"select",
+						"value":"30"
+			        },
+					{
+						"name":"singleProName",
+						"type":"input",
+						"value":"龙岩市第一医院门诊综合楼暖通工程"
+					},
+					{
+						"name":"fastExamUnit",
+						"type":"text",
+						"value":"某某监测单位"
+					},
+					{
+						"name":"dangerSite",
+						"type":"text",
+						"value":"天花板"
+					},
+					{
+						"name":"realBegDate",
+						"type":"text",
+						"value":"2017-11-07"
+					},
+					{
+						"name":"1",
+						"type":"check",
+						"value":""
+					},
+					{
+						"name":"dangerDesc",
+						"type":"text",
+						"value":"欢乐起来，呵呵呵呵的"
+					},
+					{
+						"name":".//*[@id='ds_templateSupport_form']/div/button[1]",
+						"type":"button",
+						"value":""
+					}
+
+				]
+		
+}

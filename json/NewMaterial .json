@@ -1,0 +1,49 @@
+{
+		"yongl":[
+
+					{
+						"name":"//input[@name='admissionDate']",
+						"type":"text",
+						"value":"2017-12-18"
+					},
+					{
+						"name":".//*[@id='materialsCheck_addInfo']/table[1]/tr[3]/td[4]/input",
+						"type":"text",
+						"value":"9999999"
+					},
+					{
+						"name":"//input[@name='usePlace']",
+						"type":"text",
+						"value":"头部"
+					},
+
+			       {
+				        "name":".//*[@id='materialsCheck_addInfo']/table[1]/tr[6]/td[2]/button",
+				        "type":"button",
+				        "value":""
+
+			        },
+					{
+						"name":"//input[@name='context']",
+						"type":"text",
+						"value":"很快就打算"
+					},
+					{
+						"name":".//*[@id='materialsCheck_add_table']/div[2]/div[1]/div/button[1]",
+						"type":"add",
+						"value":""
+					},
+					{
+						"name":".//*[@id='materialsCheck_wait']/div[6]/div/div[3]/center/button[1]",
+						"type":"button",
+						"value":""
+					},
+					{
+						"name":"html/body/div[2]/div/div[3]/button[2]",
+						"type":"button",
+						"value":""
+					}
+
+				]
+		
+}

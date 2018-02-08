@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite" thread-count="3">
+  <listeners>
+    <listener class-name="com.hymake.nova.service.Listener"/>
+  </listeners>
+  <test name="novatest">
+    <classes>
+      <class name="com.hymake.nova.test.ClearScreenWallTest"/>
+    </classes>
+
+  </test>
+  <!--suite-files>
+    <suite-file path="test-output/testng-failed.xml"/>
+  </suite-files !-->
+</suite>
