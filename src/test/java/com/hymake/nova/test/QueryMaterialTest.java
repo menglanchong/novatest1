@@ -67,11 +67,18 @@ public class QueryMaterialTest {
 
     }
     @Test
+    public static void checkQuerySgUnit(){
+        CommonMethodService.projectManage(CreatMaterialReviewPage.REPORTMENU,CreatMaterialReviewPage.MATERIALRECORD);
+        QueryService.QueryText(QueryMaterialPage.SGUNITNAME,"龙岩",0);
+
+    }
+    @Test
     public static void checkQueryProject(){
         CommonMethodService.projectManage(CreatMaterialReviewPage.REPORTMENU,CreatMaterialReviewPage.MATERIALRECORD);
         QueryService.QueryText(QueryMaterialPage.RECOREPRONAME,"龙岩",0);
 
     }
+
     @AfterMethod
     public static void after(){
         OtherService.closeWindow();
