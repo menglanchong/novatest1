@@ -45,64 +45,7 @@ public class ClearService extends CommonMethod{
         CommonMethod.selectMethod(wxx,value1);
         CommonMethod.selectMethod(wxy,value2);
     }
-    public static void createProject(String a,String b,String c,String d,String h){
 
-        CommonMethod.selectMethod(CreatDangerSourcePage.DANGERTYPE,"1");
-        CommonMethod.selectMethod(CreatDangerSourcePage.DANGERSOURCETYPE,"10");
-        driver.findElement(CreatDangerSourcePage.HOLEUNIT).click();
-        new WebDriverWait(driver,30).until(ExpectedConditions.presenceOfElementLocated(CreatDangerSourcePage.PROJECTUNIT));
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        driver.findElement(CreatDangerSourcePage.PROJECTUNIT).click();
-        driver.findElement(CreatDangerSourcePage.UNITSELECT).click();
-        driver.findElement(CreatDangerSourcePage.HOLEPERSON).sendKeys(a);
-        driver.findElement(CreatDangerSourcePage.EXAMORG).sendKeys(b);
-        driver.findElement(CreatDangerSourcePage.HOLEDIGDEPTH).sendKeys(c);
-        driver.findElement(CreatDangerSourcePage.BASENUM).sendKeys(d);
-        driver.findElement(CreatDangerSourcePage.REALBEGDATE).sendKeys(h);
-        driver.findElement(CreatDangerSourcePage.HOLESAVE).click();
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-       // String text =driver.findElement(CreatDangerSourcePage.dwgcjy).getText();
-        //driver.findElement(CreatDangerSourcePage.PROMPT).click();
-       // Assert.assertEquals(text,"必填项，请输入");
-
-
-
-
-    }
-    public static void createProject1(String jcdw,String wxy,String sj,String qk){
-        CommonMethod.selectMethod(CreatDangerSourcePage.DANGERTYPE,"1");
-        CommonMethod.selectMethod(CreatDangerSourcePage.DANGERSOURCETYPE,"30");
-        driver.findElement(CreatDangerSourcePage.TMPUNIT).click();
-        new WebDriverWait(driver,30).until(ExpectedConditions.presenceOfElementLocated(CreatDangerSourcePage.PROJECTUNIT));
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        driver.findElement(CreatDangerSourcePage.PROJECTUNIT).click();
-        driver.findElement(CreatDangerSourcePage.UNITSELECT).click();
-        driver.findElement(CreatDangerSourcePage.TMPFASTEXAMUNIT).sendKeys(jcdw);
-        driver.findElement(CreatDangerSourcePage.TMPDANGER).sendKeys(wxy);
-        driver.findElement(CreatDangerSourcePage.TMPREALBEGDATE).sendKeys(sj);
-        driver.findElement(CreatDangerSourcePage.TMPTYPE).click();
-        driver.findElement(CreatDangerSourcePage.TMPDANGERDESC).sendKeys(qk);
-        CommonMethodService.listData(CommonPage.BUTTON,4);
-
-       // driver.findElement(CreatDangerSourcePage.PROMPT).click();
-       // String  text =driver.findElement(CreatDangerSourcePage.TMPPROMPT).getText();
-       // System.out.print(text);
-        //Assert.assertEquals(text,"必填项，请输入");
-    }
    /* public static void creatMap(Map map){
         for (String s : map) {
             driver.findElement(CreatDangerSourcePage.REALBEGDATE).sendKeys(map.get(s));
@@ -117,62 +60,12 @@ public class ClearService extends CommonMethod{
 
     }*/
 
-   public static void createProject2(String jc,String gd,String sj,String bw){
-       driver.findElement(DangerSourcePage.DANGERRECORD).click();
-       CommonMethod.selectMethod(CreatDangerSourcePage.DANGERTYPE,"1");
-       CommonMethod.selectMethod(CreatDangerSourcePage.DANGERSOURCETYPE,"50");
-       driver.findElement(CreatDangerSourcePage.SCFFASTEXAMUNIT).sendKeys(jc);
-       driver.findElement(CreatDangerSourcePage.SCFHEIGHT).sendKeys(gd);
-       driver.findElement(CreatDangerSourcePage.SCFREALBEGDATE).sendKeys(sj);
-       driver.findElement(CreatDangerSourcePage.SCFDANGERSITE).sendKeys(bw);
-       driver.findElement(CreatDangerSourcePage.SCFSAVE).click();
-       String  text =driver.findElement(CreatDangerSourcePage.SCFPROMPT).getText();
-       Assert.assertEquals(text,"必填项，请输入");
 
-   }
-    public static void createProject3(String fzr,String dw,String sj,String bw,String fw){
-
-        CommonMethod.selectMethod(CreatDangerSourcePage.DANGERTYPE,"1");
-        CommonMethod.selectMethod(CreatDangerSourcePage.DANGERSOURCETYPE,"70");
-        driver.findElement(CreatDangerSourcePage.BLSTUNIT).click();
-        new WebDriverWait(driver,30).until(ExpectedConditions.presenceOfElementLocated(CreatDangerSourcePage.PROJECTUNIT));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-        driver.findElement(CreatDangerSourcePage.PROJECTUNIT).click();
-        driver.findElement(CreatDangerSourcePage.UNITSELECT).click();
-        driver.findElement(CreatDangerSourcePage.BLSTPERSON).sendKeys(fzr);
-        driver.findElement(CreatDangerSourcePage.BLSTPROJECTUNIT).sendKeys(dw);
-        driver.findElement(CreatDangerSourcePage.BLSTREALBEGDATE).sendKeys(sj);
-        driver.findElement(CreatDangerSourcePage.BLSTSITE).sendKeys(bw);
-        driver.findElement(CreatDangerSourcePage.BLSTRANGE).sendKeys(fw);
-        CommonMethodService.listData(CommonPage.BUTTON,4);
-        //driver.findElement(CreatDangerSourcePage.PROMPT).click();
-        // String  text =driver.findElement(CreatDangerSourcePage.TMPPROMPT).getText();
-        // System.out.print(text);
-        //Assert.assertEquals(text,"必填项，请输入");
-    }
-
-   /* public static void findWxy(){
-        driver.findElement(DangerSourcePage.PROJECTLEADER).sendKeys("fds");
-        //String text1=driver.findElement(CreatDangerSourcePage.EXAMORG).getText();
-        driver.findElement(DangerSourcePage.INQUERYBOX).click();
-        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-
-    }*/
-
-    /*public static void zbsxFind(String gc){
-
-        driver.findElement(DangerSourcePage.QUERYBOX).sendKeys(gc);
-    }*/
     //清空条件方法（文本框定位，清空定位，输入字符）
-    public static void clearTextService(By wb, String qktj){
+    public static void clearTextService(By wb, String qktj) {
         CommonMethod.sleep(2000);
         //定位到文本框并输入字符
-        WebElement element=driver.findElement(wb);
+        WebElement element = driver.findElement(wb);
         element.sendKeys(qktj);
 
         CommonMethod.sleep(3000);
@@ -181,8 +74,8 @@ public class ClearService extends CommonMethod{
         //CommonMethodService.listData(CommonPage.BUTTON,num);
         //校验文本框的值是否为空
         try {
-              Assert.assertEquals(element.getText(),"");
-              System.out.println("测试"+element.getText());
+            Assert.assertEquals(element.getText(), "");
+            System.out.println("测试" + element.getText());
         } catch (Error e) {
 
             CreateElementScreenshot.takeScreenshotByName(driver);
@@ -191,10 +84,34 @@ public class ClearService extends CommonMethod{
 
 
         }
+    }
 
         //Assert.assertEquals(element.getText(),EMPTY);
 
 
+    public static void clearCommonText(int num,String name){
+        //定位到文本框并输入字符
+        List<WebElement> text = driver.findElements(By.className("form-control"));
+        text.get(num).sendKeys(name);
+
+        CommonMethod.sleep(3000);
+        //定位清空按钮并点击
+        driver.findElement(QueryScreenWallPage.SHOWCLEAR).click();
+        CommonMethod.sleep(2000);
+        String textbox=text.get(num).getText();
+        //CommonMethodService.listData(CommonPage.BUTTON,num);
+        //校验文本框的值是否为空
+        try {
+            Assert.assertEquals(textbox,"");
+            System.out.println("测试"+textbox);
+        } catch (Error e) {
+
+            CreateElementScreenshot.takeScreenshotByName(driver);
+
+            throw e;
+
+
+        }
 
     }
     public static void clearSelectIndex(By xl, String vl){

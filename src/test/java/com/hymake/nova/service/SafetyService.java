@@ -7,12 +7,15 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Administrator on 2018/1/4.
+ * 施工安全考评菜单公用方法
  */
 public class SafetyService extends CommonMethod{
     public static void commonMethod(By menu,By by){
+
         CommonMethod.sleep(3000);
         CommonMethod.findElement(SafetyPage.SAFETY).click();
         CommonMethod.sleep(2000);

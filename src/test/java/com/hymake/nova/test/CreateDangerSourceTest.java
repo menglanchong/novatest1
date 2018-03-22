@@ -1,17 +1,20 @@
 
+
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.CreatDangerSourcePage;
 
 import com.hymake.nova.page.DangerSourcePage;
 import com.hymake.nova.service.*;
+
 import org.testng.annotations.*;
 
 import java.util.List;
 
-/** Created by Administrator on 2017/11/1.
- * */
 
+/** Created by Administrator on 2017/11/1.
+ * 危险源新增
+ * */
 
 
 public class CreateDangerSourceTest {
@@ -20,15 +23,24 @@ public class CreateDangerSourceTest {
 
         LoginTest.login();
     }
-    @Test
+    @Test(description = "新增基坑工程")
     public static void addHoleTest(){
 
         DangerSourceService.addDangerSource("\\json\\jkgcdj.json", CreatDangerSourcePage.HOLEUNIT);
-        DangerSourceService.dangerDetail("\\json\\jkgcdj.json");
+        //DangerSourceService.dangerDetail("\\json\\jkgcdj.json");
 
 
     }
-    @Test
+    @Test(description = "新增起重吊装工程")
+    public static void addHoistTest(){
+
+        DangerSourceService.addDangerSource("\\json\\qzdz.json", CreatDangerSourcePage.HOLEUNIT);
+        DangerSourceService.dangerDetail("\\json\\qzdz.json");
+
+
+
+    }
+    @Test(description = "新增模版工程")
     public static void addTmpTest(){
 
 
@@ -37,14 +49,14 @@ public class CreateDangerSourceTest {
 
 
     }
-    @Test
+    @Test(description = "新增脚手架工程")
     public static void addScfTest(){
         DangerSourceService.addDangerSource("\\json\\jsj.json", CreatDangerSourcePage.SCFUNIT);
         DangerSourceService.dangerDetail("\\json\\jsj.json");
 
 
     }
-    @Test
+    @Test(description = "新增爆破工程")
     public static void addBlstTest(){
 
         DangerSourceService.addDangerSource("\\json\\bpgc.json", CreatDangerSourcePage.BLSTUNIT);
@@ -52,7 +64,7 @@ public class CreateDangerSourceTest {
 
 
     }
-    @Test
+    @Test(description = "新增地下暗挖工程")
     public static void addDigTest(){
 
         DangerSourceService.addDangerSource("\\json\\awgc.json", CreatDangerSourcePage.HOLEUNIT);
@@ -106,4 +118,5 @@ public class CreateDangerSourceTest {
 
 
 }
+
 

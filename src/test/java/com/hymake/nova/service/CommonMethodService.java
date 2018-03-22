@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Administrator on 2017/12/20.
+ * 公用方法
  */
 public class CommonMethodService extends CommonMethod{
     public static int count(By a){
@@ -83,13 +84,21 @@ public class CommonMethodService extends CommonMethod{
         }
     }
     public static void listData(By elment,int index){
+        CommonMethod.sleep(4000);
+
         List<WebElement> first= driver.findElements(elment);
         //driver.switchTo().frame(first.get(1)); 如果多个iframe id或者其他的定位方式相同，可以用这种方式定位
         first.get(index).click();
     }
+
     public static void listText(By elment,int index,String text){
         List<WebElement> first= driver.findElements(elment);
         first.get(index).sendKeys(text);
+    }
+    public static String getText(By elment,int index){
+        List<WebElement> first= driver.findElements(elment);
+        String text=first.get(index).getText();
+        return text;
     }
     public static void trList(){
         List<WebElement> tr= driver.findElements(CommonPage.TR);
@@ -120,6 +129,8 @@ public class CommonMethodService extends CommonMethod{
         driver.findElement(secondMenu).click();
         CommonMethod.sleep(2000);
         driver.findElement(threeMenu).click();
+        CommonMethod.sleep(2000);
+
 
     }
     public static void  Manage(By secondMenu){
@@ -127,6 +138,8 @@ public class CommonMethodService extends CommonMethod{
         CommonMethod.findElement(DangerSourcePage.PROJECT).click();
         CommonMethod.sleep(2000);
         driver.findElement(secondMenu).click();
+        CommonMethod.sleep(2000);
+
 
 
     }
@@ -150,6 +163,8 @@ public class CommonMethodService extends CommonMethod{
         CommonMethod.sleep(2000);
 
     }
+
+
 
 
 }

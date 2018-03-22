@@ -1,3 +1,4 @@
+
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.CommonPage;
@@ -9,11 +10,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+
 /*
 Created by Administrator on 2017/11/15.
+校验幕墙和外窗清空按钮是否正常
  */
-
-
 
 
 public class ClearScreenWallTest {
@@ -193,3 +194,4 @@ public class ClearScreenWallTest {
 
 
 }
+

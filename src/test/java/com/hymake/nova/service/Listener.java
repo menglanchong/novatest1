@@ -10,6 +10,7 @@ import static com.hymake.nova.service.CommonMethod.driver;
 
 /**
  * Created by Administrator on 2017/11/15.
+ * 监听器
  */
 public class Listener extends TestListenerAdapter{
     private static Logger logger= Logger.getLogger(ScreenWallService.class);

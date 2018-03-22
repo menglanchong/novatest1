@@ -9,6 +9,7 @@ public class CreatMaterialReviewPage {
     public static By REPORTMENU =By.name("建设工程主要材料报审及溯源公示平台");
     public static By MATERIALCHECK=By.name("建设工程主要材料报审");
     public static By MATERIALRECORD=By.name("主要材料报审记录查询");
+    public static By PLSTFORM=By.name("主要材料溯源公示平台");
     public static By ADDMATERIAL=By.xpath(".//*[@id='materialsCheck_wait']/div[1]/div/button[3]");//点击新增
     public static By SELECT=By.xpath("//div[@id='materialsCheck_addInfo']/table/tr[2]/td[2]/button");//点击选择
     public static By MAINUNIT=By.className("highlightRow");//点击第一条单位工程
@@ -21,6 +22,7 @@ public class CreatMaterialReviewPage {
     public static By YES=By.id("hasInCheck1");
     public static By QD =By.xpath("html/body/div[2]/div/div[3]/button[2]");
     public static By PAGETABLE =By.className("el-table__body-wrapper");//在办事项表格
+    public static By REVOKE=By.xpath("//span[contains(text(),'待项目总监')]");
 
 
 

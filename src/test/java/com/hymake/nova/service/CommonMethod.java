@@ -34,7 +34,7 @@ public class CommonMethod {
     public static void browserMethod(String browser){
         String path=System.getProperty("user.dir");
         if(browser.equals("firefox") ){
-            System.setProperty("webdriver.firefox.bin","C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+            System.setProperty("webdriver.gecko.driver",path+"\\drivers\\geckodriver.exe");
             driver=new FirefoxDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -58,6 +58,7 @@ public class CommonMethod {
             driver=new InternetExplorerDriver();
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
         }
         System.out.println(path);
 
@@ -135,6 +136,14 @@ public class CommonMethod {
     public static void actionUp(){
         Actions actions=new Actions(driver);
         actions.sendKeys(Keys.UP);
+        actions.sendKeys(Keys.ENTER);
+    }
+    public static  void selectIndex(By a,int b){
+        WebElement element=driver.findElement(a);
+        Select select=new Select(element);
+        select.selectByIndex(b);
+
+
     }
     public static  void selectMethod(By a,String b){
         WebElement element=driver.findElement(a);
@@ -277,8 +286,8 @@ public class CommonMethod {
         }
         return webElement;*/
 
-        new WebDriverWait(driver, 20, 300).until(ExpectedConditions.attributeToBe(CreatMaterialReviewPage.dis
-                , "style", "display: none;"));
+        /*new WebDriverWait(driver, 20, 300).until(ExpectedConditions.attributeToBe(CreatMaterialReviewPage.dis
+                , "style", "display: none;"));*/
         try {
             Thread.sleep(4000);
         } catch (InterruptedException e) {
@@ -288,6 +297,12 @@ public class CommonMethod {
         return driver.findElement(by);
 
 
+    }
+      public static int count(By a){
+        String total=driver.findElement(a).getText();//获取底部总条数文本
+        total=total.replaceAll("共","").replaceAll("条","").trim();//获取中间条数， 文字替换成空格并去除空格+
+        int t=Integer.parseInt(total);
+        return t;
     }
 
 

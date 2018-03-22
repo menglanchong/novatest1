@@ -37,5 +37,6 @@ public class QueryScreenWallPage {
     public static By DONEITEMLIST=By.xpath(".//*[@id='cw_curtainWall']/div[1]/ul/li[3]");//已办事项定位
     public static By ALLITEMLIST=By.xpath(".//*[@id='cw_curtainWall']/div[1]/ul/li[4]");//所有事项定位
     public static By SHOWCLEAR=By.className("showClear");
+    public static By UPDATETYPE=By.name("seek_updateType");//登记类型
 
 }

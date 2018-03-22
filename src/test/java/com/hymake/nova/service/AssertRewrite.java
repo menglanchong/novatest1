@@ -8,6 +8,7 @@ import java.io.IOException;
 
 /**
  * Created by Administrator on 2017/11/16.
+ * 方法重写
  */
 public class AssertRewrite extends CommonMethod {
     private static Logger logger= Logger.getLogger(ScreenWallService.class);

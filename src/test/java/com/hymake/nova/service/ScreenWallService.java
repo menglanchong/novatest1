@@ -6,6 +6,7 @@ import org.apache.log4j.spi.LoggerFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,6 +16,8 @@ import org.testng.Assert;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+
 
 /**
  * Created by Administrator on 2017/10/25.
@@ -30,7 +33,7 @@ public class ScreenWallService extends CommonMethod{
             e.printStackTrace();
         }
         driver.findElement(ScreenWallPage.FIRSTPROJECT).click();
-        driver.findElement(ScreenWallPage.ADD).click();
+        CommonMethodService.listData(CommonPage.BUTTON,1);
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -119,28 +122,7 @@ public class ScreenWallService extends CommonMethod{
 
 
     }
-    //点击项目列表
-    public static void clickScreenWallList(){
 
-        driver.findElement(QueryScreenWallPage.PROJECTLIST).click();
-    }
-    //点击在办事项
-    public static void clickInScreenWall() {
-        driver.findElement(QueryScreenWallPage.INITEMLIST).click();
-
-
-    }
-    //点击到已办事项
-    public static void clickDoneScreenWall() {
-
-        driver.findElement(QueryScreenWallPage.DONEITEMLIST).click();
-
-    }
-    //点击到所有事项
-    public static void clickAllScreenWall() {
-       driver.findElement(QueryScreenWallPage.ALLITEMLIST).click();
-
-    }
 
     //幕墙登记必填项校验
 
@@ -151,7 +133,8 @@ public class ScreenWallService extends CommonMethod{
             e.printStackTrace();
         }
         driver.findElement(ScreenWallPage.FIRSTPROJECT).click();
-        driver.findElement(ScreenWallPage.ADD).click();
+        CommonMethodService.listData(CommonPage.BUTTON,1);
+
         driver.findElement(ScreenWallPage.SAVE).click();
         HashMap<By,String> map=new HashMap<By, String>();
         map.put(IsScreenWallPage.UNIT,"");
@@ -175,36 +158,45 @@ public class ScreenWallService extends CommonMethod{
 
         }
     }
-    public static void  createWallServer(String pathfile){
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        driver.findElement(ScreenWallPage.FIRSTPROJECT).click();
-        driver.findElement(ScreenWallPage.ADD).click();
-        String path=System.getProperty("user.dir");//获取当前路径
-        String JsonContext = new CommonMethod().ReadFile(path+pathfile);
+    public static void  createWallServer(int num,String pathfile){
+        /*CommonMethodService.listData(CommonPage.MENU,1);*/
+        CommonMethod.sleep(3000);
+        int t= DangerSourceService.count(DangerSourcePage.COUNT);
+        CommonMethodService.listData(CommonPage.MENU,0);
+        CommonMethodService.listData(CommonPage.TR,0);
+        CommonMethodService.listData(CommonPage.BUTTON,num);
+
+        String path = System.getProperty("user.dir");//获取当前路径
+        String JsonContext = new CommonMethod().ReadFile(path + pathfile);
         JSONObject jsons = new JSONObject(JsonContext);
         JSONArray features = jsons.getJSONArray("yongl");// 找到features的json数组
         for (int i = 0; i < features.length(); i++) {
             JSONObject info = features.getJSONObject(i);// 获取features数组的第i个json对象
-            //JSONObject properties = info.getJSONObject("properties");// 找到properties的json对象
+                    //JSONObject properties = info.getJSONObject("properties");// 找到properties的json对象
             String name = info.getString("name");// 读取properties对象里的name字段值
             String type = info.getString("type");
             String value = info.getString("value");
             if ("text".equals(type)) {
-                driver.findElement(By.name(name)).sendKeys(value);
-            }else if("input".equals(type)){
-                CommonMethod.selectButton(ScreenWallPage.UNITSELECT,ScreenWallPage.WALLUNIT,ScreenWallPage.CHOICE);
-            }else if("radio".equals(type)||"check".equals(type)) {
-                driver.findElement(By.id(name)).click();
-            }else {
-                driver.findElement(By.id(name)).click();
+                        driver.findElement(By.name(name)).sendKeys(value);
+
+            } else if ("radio".equals(type) || "check".equals(type)) {
+                        driver.findElement(By.id(name)).click();
+
+            } else if ("checkbox".equals(type)) {
+                        CommonMethodService.listData(CommonPage.CHECKBOX,0);
+            } else {
+                        driver.findElement(By.id(name)).click();
             }
 
-        }
+            }
 
+        CommonMethodService.listData(CommonPage.BUTTON, 4);
+        CommonMethod.sleep(3000);
+        CommonMethodService.listData(CommonPage.PROMPT,1);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        CommonMethod.sleep(2000);
+        int t1=DangerSourceService.count(DangerSourcePage.COUNT);
+        Assert.assertEquals(t1,t+1);
     }
     public static void clickFirstScreenWall(){
         try {

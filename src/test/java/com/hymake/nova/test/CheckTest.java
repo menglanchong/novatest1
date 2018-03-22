@@ -1,4 +1,5 @@
-/*
+
+
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.CommonPage;
@@ -6,10 +7,12 @@ import com.hymake.nova.page.DangerSourcePage;
 import com.hymake.nova.service.*;
 import org.testng.annotations.*;
 
-*/
+
+
 /**
  * Created by Administrator on 2017/11/9.
- *//*
+ * 校验危险源登记页面必填项
+ */
 
 public class CheckTest {
     @BeforeMethod
@@ -59,4 +62,5 @@ public class CheckTest {
 
 
 }
-*/
+
+

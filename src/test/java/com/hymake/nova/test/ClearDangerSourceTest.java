@@ -1,4 +1,5 @@
 
+
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.DangerSourcePage;
@@ -10,11 +11,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
+
 /**
  * Created by Administrator on 2017/10/23.
+ * 危险源校验清空按钮
  */
 
+
 public class ClearDangerSourceTest {
+
 
 /*
     * 用户已登录
@@ -74,4 +79,5 @@ public class ClearDangerSourceTest {
 
 
 }
+
 

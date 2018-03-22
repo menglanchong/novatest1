@@ -35,7 +35,8 @@ public class OtherService extends CommonMethod{
         System.out.println(text);
     }
     public static void reCall(){
-        SearchService.menuService();
+        CommonMethodService.projectManage(CreatMaterialReviewPage.REPORTMENU,CreatMaterialReviewPage.MATERIALCHECK);
+       // SearchService.menuService();
         driver.findElement(QueryMaterialPage.HAVEITEM).click();
         CommonMethod.sleep(3000);
 

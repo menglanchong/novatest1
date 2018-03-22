@@ -3,10 +3,11 @@
 <suite name="Default Suite" thread-count="3">
   <listeners>
     <listener class-name="com.hymake.nova.service.Listener"/>
+
   </listeners>
   <test name="novatest">
     <classes>
-      <class name="com.hymake.nova.test.ClearScreenWallTest"/>
+      <class name="com.hymake.nova.test.CreateDangerSourceTest"/>
     </classes>
 
   </test>

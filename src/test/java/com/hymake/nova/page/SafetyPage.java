@@ -68,6 +68,9 @@ public class SafetyPage {
     public static By EVALRESULT=By.name("seek_evalresult");//自评结果
     public static By DATA=By.className("el-pagination__total");//共几条
     public static By SAVE=By.xpath(".//*[@id='etpEvalueSelf']/div[2]/div/div[3]/center/input[1]");
+    public static By PERSON=By.name("unitContactPerson");//企业基本信息联系人
+    public static By TR=By.xpath("//div[contains(text(),'未提')]");
+    public static By TR1=By.xpath("//div[contains(text(),'未登')]");
 
 
 

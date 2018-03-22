@@ -1,4 +1,5 @@
 
+
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.CreatDangerSourcePage;
@@ -12,8 +13,9 @@ import org.testng.annotations.Test;
 import java.text.ParseException;
 
 
-//Created by Administrator on 2017/10/23.
-
+/**Created by Administrator on 2017/10/23.
+ * 项目经理校验危险源查询功能
+*/
 
 
 public class QueryDangerSourceTest {
@@ -41,12 +43,14 @@ public class QueryDangerSourceTest {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        /*try {
+
+/*try {
             QueryService.lookUpSelectTime(IsDangerSourcePage.DIGPLANTIME, IsDangerSourcePage.DIGREALTIME, DangerSourcePage.HAVEPROJECT,
                     DangerSourcePage.HAVEQUERYBOX,"2017-11-06","2017-11-08",7);
         } catch (ParseException e) {
             e.printStackTrace();
         }*/
+
     }
     @Test
     public static void queryProjectListTest(){
@@ -131,4 +135,5 @@ public class QueryDangerSourceTest {
         OtherService.closeWindow();
     }
 }
+
 

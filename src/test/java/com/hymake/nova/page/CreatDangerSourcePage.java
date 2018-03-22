@@ -13,6 +13,7 @@ public class CreatDangerSourcePage {
     public static By UNITCLOSE = By.xpath(".//*[@id='ds_regist-list-tab_item']/div/div[2]/div[1]/div/button[3]");//单位工程列表关闭按钮
     public static By UNITLISTCLOSE = By.xpath(".//*[@id='ds_regist-list-tab_item']/div/div[2]/div[1]/div/button[3]");//单位工程列表关闭
     public static By HOLEUNIT = By.xpath(".//*[@id='lookupBelong_dw_container']/button");//基坑工程/地下暗挖工程单位工程
+    //public static By HOIST=By.xpath()
     public static By TMPUNIT = By.xpath(".//*[@id='ds_templateSupport_form']/table/tbody/tr[1]/td[2]/button");//模版工程及支撑体系单位工程
     public static By SCFUNIT = By.xpath(".//*[@id='ds_othBase_form']/table/tbody/tr[1]/td[2]/button");//脚手架工程单位工程
     public static By BLSTUNIT = By.xpath(".//*[@id='ds_explode_form']/table/tbody/tr[1]/td[2]/button");//爆破工程单位工程

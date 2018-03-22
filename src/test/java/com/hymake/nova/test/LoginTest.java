@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Administrator on 2017/10/16.
+ * 帐号登录
  */
 public class LoginTest{
     @Test
@@ -27,6 +28,10 @@ public class LoginTest{
 
 
     }
+    @Test
+    public static void  loginManager(){
+        LoginService.openLogin("11010419910501567x","123456a");
+    }
   /*  @Test
     public static void ces(){
         ExcelDataProvider excel_driver = new ExcelDataProvider("login");
@@ -40,11 +45,11 @@ public class LoginTest{
                 System.out.println("pwd:" + info_list.get(1));
 
         }
-    }
+    }*/
     @Test
     public static void ceshi(){
-        LoginService.create();
-    }*/
+        TestService.scanner();
+    }
     @Test
     public static void close(){
 

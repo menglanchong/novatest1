@@ -42,6 +42,7 @@ public class ScreenWallPage {
     public static By CLOSEWINDOW=By.xpath(".//*[@id='cw_plusDialog']/div[1]/div/div[2]/div[2]/button[5]");//关闭窗口
     public static By WALLWINDOW=By.xpath(".//*[@id='cw_plusDialog']/div[1]/div/div[1]/span");//幕墙登记列表
     public static By SUBMIT=By.xpath(".//*[@id='cw_plusDialog']/div[1]/div/div[2]/div[2]/button[3]");//提交
+    public static By TR=By.xpath("//div[contains(text(),'草稿')]");
 
 
 

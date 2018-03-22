@@ -14,5 +14,7 @@ public class CommonPage {
     public static By MENU=By.className("el-menu-item");
     public static By TIME=By.className("el-input__inner");
     public static By TEXT=By.className("form-control");
+    public static By CHECKBOX=By.className("checkbox");
+
 
 }

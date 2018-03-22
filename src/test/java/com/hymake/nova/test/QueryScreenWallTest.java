@@ -1,8 +1,12 @@
-/*
+
+
 package com.hymake.nova.test;
 
+import com.hymake.nova.page.CommonPage;
+import com.hymake.nova.page.CreatMaterialReviewPage;
 import com.hymake.nova.page.QueryScreenWallPage;
 import com.hymake.nova.page.ScreenWallPage;
+import com.hymake.nova.service.CommonMethodService;
 import com.hymake.nova.service.QueryService;
 import com.hymake.nova.service.ScreenWallService;
 import org.testng.annotations.BeforeMethod;
@@ -10,10 +14,12 @@ import org.testng.annotations.Test;
 
 import java.text.ParseException;
 
-*/
+
+
 /**
  * Created by Administrator on 2017/11/15.
- *//*
+ * 幕墙和外窗查询
+ */
 
 public class QueryScreenWallTest {
     @BeforeMethod
@@ -22,135 +28,153 @@ public class QueryScreenWallTest {
     }
     @Test
     public static void queryProjectScreenWall(){
-        ScreenWallService.clickScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.PROJECTNAME,QueryScreenWallPage.QUERY,"第一医院",0);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        QueryService.QueryText(QueryScreenWallPage.PROJECTNAME,"第一医院",0);
 
     }
     @Test
     public static void queryProjectINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.INPROJECTNAME,QueryScreenWallPage.INQUERY,"第一医院",0);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        QueryService.QueryText(QueryScreenWallPage.INPROJECTNAME,"第一医院",0);
 
     }
     @Test
     public static void queryProjectDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.DONEPROJECTNAME,QueryScreenWallPage.DONEQUERY,"第一医院",0);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
+        QueryService.QueryText(QueryScreenWallPage.DONEPROJECTNAME,"第一医院",0);
 
     }
     @Test
     public static void queryProjectAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.ALLPROJECTNAME,QueryScreenWallPage.ALLQUERY,"第一医院",0);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
+        QueryService.QueryText(QueryScreenWallPage.ALLPROJECTNAME,"第一医院",0);
 
     }
     @Test
     public static void queryCodeScreenWall(){
-        ScreenWallService.clickScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.PROJECTCODE,QueryScreenWallPage.QUERY,"05977120120067",1);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        QueryService.QueryText(QueryScreenWallPage.PROJECTCODE,"05977120120067",1);
 
     }
     @Test
     public static void queryCodeINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.INPROJECTCODE,QueryScreenWallPage.INQUERY,"05977120120067",1);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        QueryService.QueryText(QueryScreenWallPage.INPROJECTCODE,"05977120120067",1);
 
     }
     @Test
     public static void queryCodeDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.DONEPROJECTCODE,QueryScreenWallPage.DONEQUERY,"05977120120067",1);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
+        QueryService.QueryText(QueryScreenWallPage.DONEPROJECTCODE,"05977120120067",1);
 
     }
     @Test
     public static void queryCodeAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.ALLPROJECTCODE,QueryScreenWallPage.ALLQUERY,"05977120120067",1);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
+        QueryService.QueryText(QueryScreenWallPage.ALLPROJECTCODE,"05977120120067",1);
 
     }
     @Test
     public static void queryTypeScreenWall(){
-        ScreenWallService.clickScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.PROJECTTYPE,"房建工程",QueryScreenWallPage.QUERY,4);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        QueryService.QuerySelectText(QueryScreenWallPage.PROJECTTYPE,"房建工程",4);
 
 
     }
     @Test
     public static void queryTypeINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.INPROJECTTYPE,"房建工程",QueryScreenWallPage.INQUERY,2);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        QueryService.QuerySelectText(QueryScreenWallPage.INPROJECTTYPE,"房建工程",2);
 
     }
     @Test
     public static void queryTypeDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.DONEPROJECTTYPE,"房建工程",QueryScreenWallPage.DONEQUERY,2);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
+        QueryService.QuerySelectText(QueryScreenWallPage.DONEPROJECTTYPE,"房建工程",2);
 
     }
     @Test
     public static void queryTypeAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.ALLPROJECTTYPE,"房建工程",QueryScreenWallPage.ALLQUERY,2);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
+        QueryService.QuerySelectText(QueryScreenWallPage.ALLPROJECTTYPE,"房建工程",2);
 
     }
     @Test
     public static void queryBuildINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.INCONDEP,QueryScreenWallPage.INQUERY,"龙岩市",3);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        QueryService.QueryText(QueryScreenWallPage.INCONDEP,"龙岩市",3);
 
     }
     @Test
     public static void queryBuildDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.DONECONDEP,QueryScreenWallPage.DONEQUERY,"龙岩市",3);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
+        QueryService.QueryText(QueryScreenWallPage.DONECONDEP,"龙岩市",3);
 
     }
     @Test
     public static void queryBuildAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
-        QueryService.lookUpText(QueryScreenWallPage.ALLCONDEP,QueryScreenWallPage.ALLQUERY,"龙岩市",3);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
+        QueryService.QueryText(QueryScreenWallPage.ALLCONDEP,"龙岩市",3);
 
     }
     @Test
     public static void queryChangeINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.INCHANGESTATUS,"草稿",QueryScreenWallPage.INQUERY,8);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        QueryService.QuerySelectText(QueryScreenWallPage.INCHANGESTATUS,"草稿",8);
 
     }
     @Test
     public static void queryChangeDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.DONECHANGESTATUS,"审核通过",QueryScreenWallPage.DONEQUERY,8);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
+        QueryService.QuerySelectText(QueryScreenWallPage.DONECHANGESTATUS,"审核通过",8);
 
     }
     @Test
     public static void queryChangeAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
-        QueryService.lookUpSelectText(QueryScreenWallPage.ALLCHANGESTATUS,"草稿",QueryScreenWallPage.ALLQUERY,8);
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
+        QueryService.QuerySelectText(QueryScreenWallPage.ALLCHANGESTATUS,"草稿",8);
 
     }
     @Test
+    public static void queryInUpdateType(){
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
+        QueryService.QuerySelectText(QueryScreenWallPage.UPDATETYPE,"幕墙登记",5);
+    }
+    @Test
+    public static void queryDoneUpdateType(){
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
+        QueryService.QuerySelectText(QueryScreenWallPage.UPDATETYPE,"外窗登记",5);
+    }
+    @Test
+    public static void queryAllUpdateType(){
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
+        QueryService.QuerySelectText(QueryScreenWallPage.UPDATETYPE,"幕墙登记",5);
+    }
+    @Test
     public static void queryStartINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
         try {
-            QueryService.lookUpSelectTime(QueryScreenWallPage.PROCESSSTARTTIME1,QueryScreenWallPage.PROCESSSTARTTIME2,
-                    QueryScreenWallPage.INPROJECTNAME,QueryScreenWallPage.INQUERY,"2017-11-15","2017-11-25",6);
+            QueryService.QueryMaterSelectTime(0,1,
+                    "2017-11-15","2017-11-25",QueryScreenWallPage.INPROJECTNAME,6);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -159,11 +183,11 @@ public class QueryScreenWallTest {
     }
     @Test
     public static void queryStartDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
         try {
-            QueryService.lookUpSelectTime(QueryScreenWallPage.DONEPROCESSSTARTTIME1,QueryScreenWallPage.DONEPROCESSSTARTTIME2,
-                    QueryScreenWallPage.DONEPROJECTNAME,QueryScreenWallPage.DONEQUERY,"2017-11-15","2017-11-25",6);
+            QueryService.QueryMaterSelectTime(0,1,
+                    "2017-11-15","2017-11-25",QueryScreenWallPage.INPROJECTNAME,6);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -171,11 +195,11 @@ public class QueryScreenWallTest {
     }
     @Test
     public static void queryStartAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
         try {
-            QueryService.lookUpSelectTime(QueryScreenWallPage.ALLPROCESSSTARTTIME1,QueryScreenWallPage.ALLPROCESSSTARTTIME2,
-                    QueryScreenWallPage.ALLPROJECTNAME,QueryScreenWallPage.ALLQUERY,"2017-11-15","2017-11-25",6);
+            QueryService.QueryMaterSelectTime(0,1,
+                    "2017-11-15","2017-11-25",QueryScreenWallPage.ALLPROJECTNAME,6);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -183,11 +207,11 @@ public class QueryScreenWallTest {
     }
     @Test
     public static void queryEndINScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickInScreenWall();
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,1);
         try {
-            QueryService.lookUpSelectTime(QueryScreenWallPage.PROCESSENDTIME1,QueryScreenWallPage.PROCESSENDTIME2,
-                    QueryScreenWallPage.INPROJECTNAME,QueryScreenWallPage.INQUERY,"2017-11-15","2017-11-25",7);
+            QueryService.QueryMaterSelectTime(2,3,
+                    "2017-11-15","2017-11-25",QueryScreenWallPage.INPROJECTNAME,7);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -196,11 +220,11 @@ public class QueryScreenWallTest {
     }
     @Test
     public static void queryEndDoneScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickDoneScreenWall();
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,2);
         try {
-            QueryService.lookUpSelectTime(QueryScreenWallPage.DONEPROCESSENDTIME1,QueryScreenWallPage.DONEPROCESSENDTIME2,
-                    QueryScreenWallPage.DONEPROJECTNAME,QueryScreenWallPage.DONEQUERY,"2017-11-15","2017-11-25",7);
+            QueryService.QueryMaterSelectTime(2,3,
+                    "2017-11-15","2017-11-25",QueryScreenWallPage.DONEPROJECTNAME,7);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -208,11 +232,11 @@ public class QueryScreenWallTest {
     }
     @Test
     public static void queryEndAllScreenWall(){
-        ScreenWallService.clickScreenWall();
-        ScreenWallService.clickAllScreenWall();
+        CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
+        CommonMethodService.listData(CommonPage.MENU,3);
         try {
-            QueryService.lookUpSelectTime(QueryScreenWallPage.ALLPROCESSENDTIME1,QueryScreenWallPage.ALLPROCESSENDTIME2,
-                    QueryScreenWallPage.ALLPROJECTNAME,QueryScreenWallPage.ALLQUERY,"2017-11-15","2017-11-25",7);
+            QueryService.QueryMaterSelectTime(2,3,
+                    "2017-11-15","2017-11-25",QueryScreenWallPage.ALLPROJECTNAME,7);
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -221,4 +245,5 @@ public class QueryScreenWallTest {
 
 
 }
-*/
+
+

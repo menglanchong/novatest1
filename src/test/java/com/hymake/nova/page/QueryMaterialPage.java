@@ -32,6 +32,8 @@ public class QueryMaterialPage {
     public static By SGUNITNAME=By.name("seek_sgUnitName");//施工单位
     public static By JLUNIT=By.name("seek_jlUnitName");//监理单位
     public static By clear=By.xpath(".//*[@id='materialCheckQuery']/div[1]/div/button[4]");
+    public static By TR=By.xpath("//span[contains(text(),'草稿')]");
+
 
 
 

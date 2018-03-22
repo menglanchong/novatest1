@@ -25,7 +25,7 @@ public class DangerSourceService  extends CommonMethod{
         CommonMethod.sleep(5000);
         CommonMethodService.projectManage(DangerSourcePage.DANGERM,DangerSourcePage.DANGERREGISTER);
         CommonMethod.sleep(4000);
-        CommonMethodService.listData(CommonPage.MENU,2);
+        CommonMethodService.listData(CommonPage.MENU,1);
         CommonMethod.sleep(2000);
         int t= count(DangerSourcePage.COUNT);
         CommonMethodService.listData(CommonPage.MENU,0);
@@ -35,7 +35,7 @@ public class DangerSourceService  extends CommonMethod{
         CommonMethodService.listData(CommonPage.BUTTON,1);
         CreateService.createServer(path, mc, CreatDangerSourcePage.PROJECTUNIT, CreatDangerSourcePage.UNITSELECT);
         CommonMethod.sleep(3000);
-        CommonMethodService.listData(CommonPage.MENU,2);
+        CommonMethodService.listData(CommonPage.MENU,1);
         CommonMethod.sleep(2000);
 //        String total1=driver.findElement(WxyPage.t).getText();//获取底部总条数文本
 //        System.out.println(total1);
@@ -46,12 +46,12 @@ public class DangerSourceService  extends CommonMethod{
     }
 
 
-    public static int count(By a){
+   /* public static int count(By a){
         String total=driver.findElement(a).getText();//获取底部总条数文本
         total=total.replaceAll("共","").replaceAll("条","").trim();//获取中间条数， 文字替换成空格并去除空格+
         int t=Integer.parseInt(total);
         return t;
-    }
+    }*/
     public static void deleteDanger(){
         try {
             Thread.sleep(3000);
@@ -116,7 +116,7 @@ public class DangerSourceService  extends CommonMethod{
     public static void dangerDetail(String pathfile){
         CommonMethod.sleep(2000);
         CommonMethodService.listData(CommonPage.TR,0);
-        CommonMethodService.listData(CommonPage.BUTTON,2);
+        CommonMethodService.listData(CommonPage.BUTTON,3);
         //driver.findElement(DangerSourcePage.INFIRST).click();
         String path=System.getProperty("user.dir");//获取当前路径
         String JsonContext = new CommonMethod().ReadFile(path+pathfile);
@@ -145,7 +145,7 @@ public class DangerSourceService  extends CommonMethod{
             }
 
         }
-        CommonMethodService.listData(CommonPage.BUTTON,4);
+        CommonMethodService.listData(CommonPage.BUTTON,5);
 
     }
     public static void buttonServer(){

@@ -2,6 +2,7 @@ package com.hymake.nova.service;
 
 import com.hymake.nova.page.CommonPage;
 import com.hymake.nova.page.DangerSourcePage;
+import com.hymake.nova.page.QueryScreenWallPage;
 import com.hymake.nova.page.SafetyPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,7 @@ import java.util.List;
 
 /**
  * Created by Administrator on 2018/1/15.
+ * 个人用来测试调试用的
  */
 public class ceshi extends CommonMethod{
     public static String roleJudge(By a) {
@@ -52,9 +54,9 @@ public class ceshi extends CommonMethod{
         }
     }
     public static double avgMonkey(){
-        String[] array = {"19","21"};
-        double prices=13.5;
-        double total=40;
+        String[] array = {"18","18","13","13","25","16","20"};
+        double prices=61.5;
+        double total=123;
         double avg=prices/total;
         for(int i=0;i<array.length;i++){
             double one=Double.parseDouble(array[i])-Double.parseDouble(array[i])*avg;
@@ -91,5 +93,25 @@ public class ceshi extends CommonMethod{
 
             System.out.println("没有数据可删除");
         }
+    }
+    public static  void upload(){
+        CommonMethod.browserMethod("chrome");
+        driver.get("http://sahitest.com/demo/index.htm");
+        driver.findElement(By.xpath("html/body/table/tbody/tr/td[3]/a[6]")).click();
+        CommonMethod.sleep(2000);
+        driver.findElement(By.id("file")).sendKeys("C:\\Users\\Administrator\\Desktop\\3.jpg");
+        List<WebElement> list =driver.findElements(By.tagName(""));
+
+    }
+    public static void flowWindow(){
+        CommonMethodService.listData(CommonPage.MENU,1);
+        CommonMethod.selectValueMethod(QueryScreenWallPage.UPDATETYPE,"幕墙登记");
+        CommonMethodService.listData(CommonPage.BUTTON,0);
+        CommonMethodService.listData(CommonPage.TR,0);
+        CommonMethodService.listData(CommonPage.BUTTON,2);
+        CommonMethodService.listData(CommonPage.PROMPT,1);
+
+
+
     }
 }

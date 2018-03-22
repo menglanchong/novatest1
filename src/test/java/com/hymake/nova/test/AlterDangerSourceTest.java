@@ -1,4 +1,5 @@
-/*
+
+
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.CreatDangerSourcePage;
@@ -11,10 +12,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-*/
+
+
 /*
  * Created by Administrator on 2017/10/23.
- * *//*
+ * 修改危险源登记用例
+ * */
 
 
 
@@ -66,4 +69,5 @@ public class AlterDangerSourceTest {
 
 
 }
-*/
+
+

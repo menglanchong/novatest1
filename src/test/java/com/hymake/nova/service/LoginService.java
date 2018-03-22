@@ -8,6 +8,7 @@ import jxl.Sheet;
 import jxl.Workbook;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
@@ -20,16 +21,20 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Administrator on 2017/10/16.
+ * 登录方法
  */
 public class LoginService extends CommonMethod {
+
     private static Logger logger = Logger.getLogger(ScreenWallService.class);
     // public static WebDriver driver=DriverManager.getDriver();
     public static String browser;
+
 
     public static void openLogin(String user,String pwd) {
 
 
             CommonMethod.browserMethod("chrome");
+
             driver.get("http://118.178.114.134/login");
             CommonMethod.sleep(4000);
             driver.findElement(LoginPage.user).sendKeys(user);
