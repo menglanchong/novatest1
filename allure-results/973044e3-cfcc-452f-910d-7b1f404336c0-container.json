@@ -1,0 +1,1 @@
+{"uuid":"973044e3-cfcc-452f-910d-7b1f404336c0","name":"com.hymake.nova.test.QueryMaterialPlatform.after","description":"","start":1521531729198,"stop":1521531732096,"children":["faa6c910-f5a7-4a63-bc53-2c2e1a8ba2e9"],"afters":[{"name":"after","status":"passed","stage":"finished","description":"","start":1521531729198,"stop":1521531732096}]}

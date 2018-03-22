@@ -1,0 +1,1 @@
+{"uuid":"70a17050-e537-4f17-8306-0df2ba4a9b2b","name":"com.hymake.nova.test.CreateDangerSourceTest.before","description":"","start":1520477966171,"stop":1520477981418,"children":["795f09c9-2f97-4180-b42e-96c5799dfb89"],"befores":[{"name":"before","status":"passed","stage":"finished","description":"","start":1520477966172,"stop":1520477981417}]}

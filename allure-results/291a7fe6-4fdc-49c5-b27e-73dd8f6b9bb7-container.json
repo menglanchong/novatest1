@@ -1,0 +1,1 @@
+{"uuid":"291a7fe6-4fdc-49c5-b27e-73dd8f6b9bb7","name":"com.hymake.nova.test.CreateTest.before","description":"","start":1521167975386,"stop":1521167996590,"children":["ea7c6fde-d835-4175-bdfb-77211ec7cdf0"],"befores":[{"name":"before","status":"passed","stage":"finished","description":"","start":1521167975387,"stop":1521167996588}]}

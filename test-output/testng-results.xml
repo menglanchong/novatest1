@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="11" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default Suite" duration-ms="835460" started-at="2018-03-08T03:22:32Z" finished-at="2018-03-08T03:36:27Z">
+    <groups>
+    </groups>
+    <test name="novatest" duration-ms="835460" started-at="2018-03-08T03:22:32Z" finished-at="2018-03-08T03:36:27Z">
+      <class name="com.hymake.nova.test.CreateDangerSourceTest">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="14818" started-at="2018-03-08T11:22:32Z" finished-at="2018-03-08T11:22:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addBlstTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="addBlstTest" duration-ms="92512" started-at="2018-03-08T11:22:47Z" finished-at="2018-03-08T11:24:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBlstTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="3306" started-at="2018-03-08T11:24:19Z" finished-at="2018-03-08T11:24:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13780" started-at="2018-03-08T11:24:23Z" finished-at="2018-03-08T11:24:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addDigTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="addDigTest" duration-ms="96121" started-at="2018-03-08T11:24:36Z" finished-at="2018-03-08T11:26:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addDigTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2773" started-at="2018-03-08T11:26:13Z" finished-at="2018-03-08T11:26:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13556" started-at="2018-03-08T11:26:15Z" finished-at="2018-03-08T11:26:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addHoistTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="addHoistTest" duration-ms="100231" started-at="2018-03-08T11:26:29Z" finished-at="2018-03-08T11:28:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addHoistTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2742" started-at="2018-03-08T11:28:09Z" finished-at="2018-03-08T11:28:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="14237" started-at="2018-03-08T11:28:12Z" finished-at="2018-03-08T11:28:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addHoleTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="addHoleTest" duration-ms="65164" started-at="2018-03-08T11:28:26Z" finished-at="2018-03-08T11:29:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addHoleTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2758" started-at="2018-03-08T11:29:31Z" finished-at="2018-03-08T11:29:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13766" started-at="2018-03-08T11:29:34Z" finished-at="2018-03-08T11:29:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addScfTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="addScfTest" duration-ms="89737" started-at="2018-03-08T11:29:48Z" finished-at="2018-03-08T11:31:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addScfTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2760" started-at="2018-03-08T11:31:18Z" finished-at="2018-03-08T11:31:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="15708" started-at="2018-03-08T11:31:20Z" finished-at="2018-03-08T11:31:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="addTmpTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="addTmpTest" duration-ms="89868" started-at="2018-03-08T11:31:36Z" finished-at="2018-03-08T11:33:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addTmpTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="3267" started-at="2018-03-08T11:33:06Z" finished-at="2018-03-08T11:33:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13072" started-at="2018-03-08T11:33:09Z" finished-at="2018-03-08T11:33:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="buttonAssert()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="buttonAssert" duration-ms="7055" started-at="2018-03-08T11:33:22Z" finished-at="2018-03-08T11:33:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buttonAssert -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2745" started-at="2018-03-08T11:33:29Z" finished-at="2018-03-08T11:33:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13044" started-at="2018-03-08T11:33:32Z" finished-at="2018-03-08T11:33:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="clearTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="clearTest" duration-ms="26694" started-at="2018-03-08T11:33:45Z" finished-at="2018-03-08T11:34:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2761" started-at="2018-03-08T11:34:12Z" finished-at="2018-03-08T11:34:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="14506" started-at="2018-03-08T11:34:15Z" finished-at="2018-03-08T11:34:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="deleteTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="deleteTest" duration-ms="18362" started-at="2018-03-08T11:34:29Z" finished-at="2018-03-08T11:34:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2871" started-at="2018-03-08T11:34:47Z" finished-at="2018-03-08T11:34:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13990" started-at="2018-03-08T11:34:50Z" finished-at="2018-03-08T11:35:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="lookTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="lookTest" duration-ms="31229" started-at="2018-03-08T11:35:04Z" finished-at="2018-03-08T11:35:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lookTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2731" started-at="2018-03-08T11:35:36Z" finished-at="2018-03-08T11:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="before()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="before" is-config="true" duration-ms="13328" started-at="2018-03-08T11:35:38Z" finished-at="2018-03-08T11:35:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="recallTest()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="recallTest" duration-ms="32864" started-at="2018-03-08T11:35:52Z" finished-at="2018-03-08T11:36:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recallTest -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.hymake.nova.test.CreateDangerSourceTest@63bca84d]" name="after" is-config="true" duration-ms="2940" started-at="2018-03-08T11:36:24Z" finished-at="2018-03-08T11:36:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- com.hymake.nova.test.CreateDangerSourceTest -->
+    </test> <!-- novatest -->
+  </suite> <!-- Default Suite -->
+</testng-results>

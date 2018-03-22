@@ -1,0 +1,1 @@
+{"uuid":"b8c56ff3-adae-49ce-979f-07ac71d43ab7","name":"com.hymake.nova.test.CreateScreenWallTest.before","description":"","start":1521527615602,"stop":1521527630021,"children":["d6377abf-33bb-4d16-b467-f7ad4177ca54"],"befores":[{"name":"before","status":"passed","stage":"finished","description":"","start":1521527615602,"stop":1521527630020}]}
