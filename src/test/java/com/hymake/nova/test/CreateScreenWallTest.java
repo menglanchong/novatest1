@@ -29,12 +29,12 @@ public class CreateScreenWallTest {
         LoginTest.loginManager();
 
     }
-    @Test
+    @Test(description = "新增幕墙登记")
     public static void createScreenWallTest(){
         DeleteService.deleteDraft();//删除所有草稿
         ScreenWallService.createWallServer(1,"\\json\\screenwall.json");
     }
-    @Test
+    @Test(description = "新增外窗登记")
     public static void createWindow(){
 
         DeleteService.deleteDraft();//删除所有草稿
@@ -43,12 +43,12 @@ public class CreateScreenWallTest {
 
     }
 
-    @Test
+    /*@Test
     public static void checkScreenWall(){
         ScreenWallService.clickScreenWall();
         ScreenWallService.screenWallCheck();
 
-    }
+    }*/
 
 
 

@@ -27,14 +27,14 @@ public class CreateSafetyTest {
 
     }
 
-   @Test
+   @Test(description = "新增施工企业自评填报")
     public static void createSafety(){
        SafetyService.commonMethod(SafetyPage.COMPANY,SafetyPage.ETPEVALUE);
        CommonMethod.sleep(2000);
        DeleteService.deleteState(6,SafetyPage.TR,3);
        CreateService.addSafety("\\json\\safety.json",7);
     }
-    @Test
+    @Test(description = "新增施工企业自评填报")
     public static void createSatetyInformation(){
         SafetyService.commonMethod(SafetyPage.COMPANY,SafetyPage.IMFORMATION);
         CommonMethod.sleep(2000);
@@ -45,12 +45,12 @@ public class CreateSafetyTest {
     }
 
 
-    @Test
+   /* @Test
     public static void  getTrText(){
         CommonMethodService.projectManage(DangerSourcePage.DANGERM,DangerSourcePage.DANGERQR);
         CommonMethod.sleep(2000);
         CommonMethodService.trList();
-    }
+    }*/
     @AfterMethod
     public static void after(){
         OtherService.closeWindow();

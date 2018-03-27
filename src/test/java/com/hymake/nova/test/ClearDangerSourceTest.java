@@ -3,9 +3,8 @@
 package com.hymake.nova.test;
 
 import com.hymake.nova.page.DangerSourcePage;
-import com.hymake.nova.service.ClearService;
-import com.hymake.nova.service.DangerSourceService;
-import com.hymake.nova.service.OtherService;
+import com.hymake.nova.service.*;
+import org.openqa.selenium.By;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -32,7 +31,7 @@ public class ClearDangerSourceTest {
         //调用登录方法
         LoginTest.login();
     }
-    @Test //项目管理页面清空
+    @Test(description = "项目管理页面项目名称清空")
     public static void clearProject(){
 
         //调用进入危险源登记页面
@@ -44,8 +43,8 @@ public class ClearDangerSourceTest {
 
 
     }
-    @Test //在办事项清空
-    public static void clearTest1(){
+    @Test (description = "在办事项项目负责人清空")
+    public static void clearInTest(){
 
         //调用进入危险源登记页面
         DangerSourceService.dangerSourceMenu(1);
@@ -53,7 +52,7 @@ public class ClearDangerSourceTest {
         ClearService.clearTextService(DangerSourcePage.PROJECTLEADER,"小张");
     }
 
-@Test
+    @Test(description = "在办事项危险性类型清空")
     public static void clearInDangerSource(){
         //调用进入危险源登记页面
         //DangerSourceService.clickInDangerSource();
@@ -64,11 +63,48 @@ public class ClearDangerSourceTest {
 
     }
 
-   @Test
-   public static void relive(){
+    @Test (description = "已办事项项目清空")
+    public static void clearDoneProj(){
 
-   }
+        //调用进入危险源登记页面
+        DangerSourceService.dangerSourceMenu(2);
+        //调用清空方法
+        ClearService.clearTextService(DangerSourcePage.JNAME,"龙岩");
+    }
+    @Test (description = "已办事项状态清空")
+    public static void clearDoneState(){
 
+        //调用进入危险源登记页面
+        DangerSourceService.dangerSourceMenu(2);
+        //调用清空方法
+        ClearService.clearSelectValue(DangerSourcePage.STATU,"草稿");
+    }
+    @Test (description = "所有事项项目名称清空")
+    public static void clearAllProj(){
+
+        //调用进入危险源登记页面
+        DangerSourceService.dangerSourceMenu(3);
+        //调用清空方法
+        ClearService.clearTextService(DangerSourcePage.JNAME,"龙岩");
+    }
+    @Test (description = "所有事项状态清空")
+    public static void clearAllState(){
+
+        //调用进入危险源登记页面
+        DangerSourceService.dangerSourceMenu(3);
+        //调用清空方法
+        ClearService.clearSelectValue(DangerSourcePage.STATU,"草稿");
+    }
+    /*@Test
+    public static void clearS() {
+
+        //调用进入危险源登记页面
+        DangerSourceService.dangerSourceMenu(1);
+        CommonMethod.selectIndex(By.name("seek_dangerLevel"),2);
+        String s=CommonMethodService.selectGetValue(By.name("seek_dangerLevel"));
+        System.out.println(s);
+    }
+*/
 
 
 @AfterMethod

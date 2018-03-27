@@ -20,6 +20,7 @@ import org.testng.Assert;
 public class CreateService extends CommonMethod{
     private static Logger logger= Logger.getLogger(ScreenWallService.class);
     //public static WebDriver driver= DriverManager.getDriver();
+    //读取json 文件，并对其相应类型进行判断操作
     public static void  createServer(String pathfile,By dwgc,By lb,By xz){
         String path=System.getProperty("user.dir");//获取当前路径
         String JsonContext = new CommonMethod().ReadFile(path+pathfile);
@@ -50,6 +51,7 @@ public class CreateService extends CommonMethod{
 
 
     }
+    //读取json 文件，并对其相应类型进行判断操作
     public static void creatJkMethod(String pathfile,By dwgc,By lb,By xz){
         String path=System.getProperty("user.dir");//获取当前路径
         String JsonContext = new CommonMethod().ReadFile(path+pathfile);
@@ -77,6 +79,7 @@ public class CreateService extends CommonMethod{
         new WebDriverWait(driver,30).until(ExpectedConditions.presenceOfElementLocated(CreatDangerSourcePage.PROMPT));
         driver.findElement(CreatDangerSourcePage.PROMPT).click();
     }
+    //读取json 文件，并对其相应类型进行判断操作
     public static void createSafetyMethod(String pathfile,int index){
         String path=System.getProperty("user.dir");//获取当前路径
         String JsonContext = new CommonMethod().ReadFile(path+pathfile);
@@ -101,6 +104,7 @@ public class CreateService extends CommonMethod{
         //driver.findElement(by).click();
         //CommonMethodService.listData(CommonPage.PROMPT,1);
     }
+    //施工安全考评相关的新增方法并判断
     public static void addSafety(String pathfile,int i){
        /* CommonMethod.sleep(5000);
         SafetyService.commonMethod(SafetyPage.COMPANY,SafetyPage.ETPEVALUE);*/
@@ -117,6 +121,7 @@ public class CreateService extends CommonMethod{
         Assert.assertEquals(t1,t+1);
 
     }
+    //施工安全考评相关的新增方法并判断
     public static void addSafetyInformation(String pathfile,int i){
         CommonMethod.sleep(2000);
         int t= count(DangerSourcePage.COUNT);

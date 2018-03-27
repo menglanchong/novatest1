@@ -27,25 +27,25 @@ public class QueryMaterialPlatform {
         CommonMethod.winTest();
     }
 
-    @Test
+    @Test(description = "建材报验公示平台项目名称和建设单位查询")
     public static void queryJsUnit(){
 
         QueryService.multipeService("龙岩",2,"医院",2);
 
     }
-    @Test
+    @Test(description = "建材报验公示平台项目名称和施工单位查询")
     public static void querySgUnit(){
 
         QueryService.multipeService("龙岩",3,"福建",3);
 
     }
-    @Test
+    @Test(description = "建材报验公示平台项目名称和监理单位查询")
     public static void queryJUnit(){
 
         QueryService.multipeService("龙岩",4,"厦门",4);
 
     }
-    @Test
+    @Test(description = "建材报验公示平台项目名称和类型查询")
     public static void queryStytle(){
 
         QueryService.multipeStytleService("龙岩","建设工程主要材料报审表",1);

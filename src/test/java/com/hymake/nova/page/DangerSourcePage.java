@@ -68,6 +68,7 @@ public class DangerSourcePage {
     public static By dwgcxg=By.xpath(".//*[@id='lookupBelong_dw_container']/button");//危险源修改
     public static By ADDDENGERTYPE=By.id("dangerLevel-select");
     public static By ADDDENGERSOURCETYPE=By.id("dangerType-select");
+    public static By STATU=By.name("seek_wfStatus");//变更状态
 
 
 

@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 public class DeleteTest {
 
-    @Test
+    @Test(description = "施工企业自评删除")
     public static void deleteCompany(){
         LoginTest.loginBuilder();
         CommonMethod.sleep(5000);
@@ -23,7 +23,7 @@ public class DeleteTest {
         CommonMethod.sleep(2000);
         DeleteService.deleteState(6,SafetyPage.TR,3);
     }
-    @Test
+    @Test(description = "建材报验删除")
     public static void deleteMaterial(){
         LoginTest.login();
         CommonMethod.sleep(5000);
@@ -33,7 +33,7 @@ public class DeleteTest {
 
 
     }
-    @Test
+    @Test(description = "外窗幕墙删除")
     public static void deleteWindow(){
         LoginTest.login();
         DeleteService.deleteDraft();
@@ -71,10 +71,10 @@ public class DeleteTest {
 
 
 
-   /* @AfterMethod
+    @AfterMethod
     public static void after(){
         OtherService.closeWindow();
-    }*/
+    }
 
 }
 

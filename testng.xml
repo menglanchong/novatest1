@@ -6,8 +6,12 @@
 
   </listeners>
   <test name="novatest">
+    <!--packages>
+      <package name="com.hymake.nova.test"/>
+    </packages-->
     <classes>
-      <class name="com.hymake.nova.test.CreateDangerSourceTest"/>
+      <class name="com.hymake.nova.test.ClearMaterialTest"/>
+
     </classes>
 
   </test>

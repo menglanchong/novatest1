@@ -72,20 +72,20 @@ public class CreateDangerSourceTest {
 
 
     }
- @Test
+ @Test(description = "删除危险源")
     public static void deleteTest(){
 
         DangerSourceService.deleteDanger();
 
     }
-    @Test
+    @Test(description = "危险源清空类型校验")
     public static void clearTest(){
         DangerSourceService.dangerSourceMenu(1);
-        DangerSourceService.clearServer("模板工程及支撑体系");
+        DangerSourceService.clearServer(DangerSourcePage.DANGERSOURCETYPE,"模板工程及支撑体系");
 
 
     }
-    @Test
+    @Test(description = "危险源查询校验")
     public static void lookTest(){
 
         DangerSourceService.dangerSourceMenu(1);
@@ -94,14 +94,14 @@ public class CreateDangerSourceTest {
 
     }
 
-    @Test
+    @Test(description = "危险源撤回校验")
     public static void recallTest(){
 
         DangerSourceService.dangerSourceMenu(1);
         DangerSourceService.recallServer();
 
     }
-    @Test
+    @Test(description = "危险源按钮选择校验")
     public static void buttonAssert(){
 
         DangerSourceService.buttonServer();

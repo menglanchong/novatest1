@@ -36,6 +36,9 @@ public class DeleteService extends CommonMethod{
         }
 
     }
+    /*
+    * 针对存在数据的进行循环删除
+    * */
     public static void deleteDraft(){
         CommonMethodService.Manage(ScreenWallPage.WALLREGISTER);
         CommonMethodService.listData(CommonPage.MENU,1);

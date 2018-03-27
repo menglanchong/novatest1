@@ -25,6 +25,7 @@ import java.util.List;
 public class QueryService extends CommonMethod {
     private static Logger logger= Logger.getLogger(ScreenWallService.class);
    // public static WebDriver driver= DriverManager.getDriver();
+    //文本查询校验
     public static void lookUpText(By element, By look, String text, int index) {
         CommonMethod.sleep(2000);
         driver.findElement(element).sendKeys(text);
@@ -46,8 +47,9 @@ public class QueryService extends CommonMethod {
         }
 
     }
+    //下拉选择查询校验
     public static void lookUpSelectText(By element, String value,By lk , int index) {
-        CommonMethod.sleep(2000);
+        CommonMethod.sleep(3000);
         CommonMethod.selectValueMethod(element,value);
         CommonMethod.sleep(2000);
         driver.findElement(lk).click();//点击查询
@@ -65,6 +67,7 @@ public class QueryService extends CommonMethod {
 
         }
     }
+    //时间查询校验
     public static void lookUpSelectTime(By time1, By time2, By xm, By cx, String ks1, String ks2,int index) throws ParseException {
         CommonMethod.sleep(2000);
         driver.findElement(time1).sendKeys(ks1);
@@ -101,6 +104,7 @@ public class QueryService extends CommonMethod {
 
 
     }
+    //文本查询校验
 
     public static void QueryText(By element, String text, int index) {
         driver.findElement(element).sendKeys(text);
@@ -132,6 +136,7 @@ public class QueryService extends CommonMethod {
 
 
     }
+    //下拉查询校验
     public static void QuerySelectText(By element, String value, int index) {
         CommonMethod.sleep(2000);
         CommonMethod.selectValueMethod(element,value);
@@ -158,6 +163,7 @@ public class QueryService extends CommonMethod {
             System.out.println("暂无数据，无法校验");
         }
     }
+    //时间查询校验
     public static void QuerySelectTime( String ks1, String ks2,By clicktext,int index) throws ParseException {
         List<WebElement> text = driver.findElements(By.className("el-input__inner"));
         text.get(0).sendKeys(ks1);
@@ -199,6 +205,7 @@ public class QueryService extends CommonMethod {
         }
 
     }
+    //时间查询校验
 
     public static void QueryMaterSelectTime( int t1,int t2,String ks1, String ks2,By proj,int index) throws ParseException {
         List<WebElement> text = driver.findElements(By.className("el-input__inner"));
@@ -234,6 +241,7 @@ public class QueryService extends CommonMethod {
         }
 
     }
+    //查询方法校验
     public static void  multipeService(String str1,int num ,String str2,int index){
         List<WebElement> text = driver.findElements(By.className("form-control"));
         System.out.println("长度："+text.size());
@@ -270,6 +278,7 @@ public class QueryService extends CommonMethod {
         }
 
     }
+    //查询方法校验
     public static void  multipeStytleService(String str,String value,int index){
         List<WebElement> text = driver.findElements(By.className("form-control"));
         text.get(0).sendKeys(str);
@@ -290,6 +299,21 @@ public class QueryService extends CommonMethod {
             Assert.assertTrue(colsText.equals(value));
 
         }
+
+    }
+    public static void query(int index,By element,String text){
+        int t =DangerSourceService.count(SafetyPage.DATA);
+        WebElement table = driver.findElement(DangerSourcePage.PAGETABLE);
+        //得到表格中所有tr标签的集合
+        List<WebElement> rows = table.findElements(By.tagName("tr"));
+        // 然后再次使用for循环把每行的单元格文本遍历输出
+        for(WebElement row:rows) {
+            // 然后得到当前所有tr里td标签的集合
+            List<WebElement> cols = row.findElements(By.tagName("td"));
+            String colsText = cols.get(index).getText();
+
+        }
+
 
     }
 

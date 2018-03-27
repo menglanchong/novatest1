@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
  * Created by Administrator on 2017/12/14.
  */
 public class CreateMaterialService extends CommonMethod{
+    //新增材料报验方法
     public static void createMaterial(){
 
        /* new WebDriverWait(driver, 20, 300).until(ExpectedConditions.attributeToBe(CreatMaterialReviewPage.dis
@@ -32,21 +33,12 @@ public class CreateMaterialService extends CommonMethod{
         CommonMethodService.listData(CommonPage.BUTTON,7);
         CommonMethod.sleep(2000);
         CommonMethod.findElement(CreatMaterialReviewPage.MAINUNIT).click();
-        //String a=driver.findElement(QueryMaterialPage.PROJECTNAME).getAttribute("input");
-        //System.out.println("测试"+a);
-       // CommonMethod.sleep(2000);
-        //driver.findElement(QueryMaterialPage.SEARCH).click();
-
         CommonMethod.findElement(CreatMaterialReviewPage.CONFIRM).click();
         CommonMethod.findElement(CreatMaterialReviewPage.REAFFIRM).click();
         createMaterialServer("\\json\\NewMaterial .json");
-       /* CommonMethod.sleep(2000);
-        CommonMethod.findElement(CreatMaterialReviewPage.ADD).click();
-        CommonMethod.sleep(2000);
-        CommonMethod.actionMethod(driver.findElement(CreatMaterialReviewPage.MOVE));
-        CommonMethod.sleep(2000);
-        driver.findElement(CreatMaterialReviewPage.YES).click();*/
+
     }
+    //读取json 文件，并对其相应类型进行判断操作
     public static void  createMaterialServer(String pathfile) {
         String path = System.getProperty("user.dir");//获取当前路径
         String JsonContext = new CommonMethod().ReadFile(path + pathfile);
@@ -75,6 +67,7 @@ public class CreateMaterialService extends CommonMethod{
         driver.findElement(CreatMaterialReviewPage.QD).click();*/
 
     }
+    //读取json 文件，并对其相应类型进行判断操作
     public static void creatProject(String pathfile){
         String path = System.getProperty("user.dir");//获取当前路径
         String JsonContext = new CommonMethod().ReadFile(path + pathfile);

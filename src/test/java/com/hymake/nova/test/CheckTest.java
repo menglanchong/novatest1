@@ -25,31 +25,31 @@ public class CheckTest {
         //DangerSourceService.dangerSourceToProject();
 
     }
-    @Test
+    @Test(description = "基坑工程必填校验")
     public static void hole(){
 
         CheckService.holeCheck();
 
     }
-    @Test
+    @Test(description = "模板工程及支撑体系必填校验")
     public static void tmp(){
 
         CheckService.tmpCheck();
 
     }
-    @Test
+    @Test(description = "脚手架工程必填校验")
     public static void scf(){
 
         CheckService.scfCheck();
 
     }
-    @Test
+    @Test(description = "爆破工程必填校验")
     public static void blst(){
 
         CheckService.blstCheck();
 
     }
-    @Test
+    @Test(description = "地下暗挖必填校验")
     public static void dig(){
 
         CheckService.digCheck();

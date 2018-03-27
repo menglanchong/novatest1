@@ -6,6 +6,7 @@ import com.hymake.nova.page.QueryScreenWallPage;
 import com.hymake.nova.page.SafetyPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.math.BigDecimal;
@@ -112,6 +113,12 @@ public class ceshi extends CommonMethod{
         CommonMethodService.listData(CommonPage.PROMPT,1);
 
 
+
+    }
+    public static void selectValue(){
+        Select select=new Select(driver.findElement(By.name("seek_dangerLevel")));
+        String s=select.getFirstSelectedOption().getText();
+        System.out.println("打印："+s);
 
     }
 }

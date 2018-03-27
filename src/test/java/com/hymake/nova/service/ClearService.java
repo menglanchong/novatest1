@@ -114,48 +114,64 @@ public class ClearService extends CommonMethod{
         }
 
     }
+    /*
+    * 下拉框下标清空
+    * */
     public static void clearSelectIndex(By xl, String vl){
 
         CommonMethod.sleep(2000);
         CommonMethod.selectMethod(xl,vl);
-        driver.findElement(DangerSourcePage.PROJECT).click();
-        CommonMethod.sleep(2000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        /*String value=(String)js.executeScript("var select=document.getElementsByTagName(\"select\")[0];var index = " +
-                "select.selectedIndex;var value = select.options[index].text; return value;");*/
+        /*driver.findElement(DangerSourcePage.PROJECT).click();
+        CommonMethod.sleep(2000);*/
+        /*JavascriptExecutor js = (JavascriptExecutor) driver;
+        *//*String value=(String)js.executeScript("var select=document.getElementsByTagName(\"select\")[0];var index = " +
+                "select.selectedIndex;var value = select.options[index].text; return value;");*//*
         String value=(String)js.executeScript("document.querySelectorAll('select.form-control')[0]. options[document.querySelectorAll" +
                 "('select.form-control')[0].selectedIndex].text");
-        System.out.println("打印结果："+value);
+        System.out.println("打印结果："+value);*/
         driver.findElement(DangerSourcePage.INEMPTY).click();
+        CommonMethod.sleep(2000);
+        String value=CommonMethodService.selectGetValue(xl);
         Assert.assertEquals(value,"全部");
     }
+    /*
+    * 下拉框下拉值清空
+    * */
     public static void clearSelectValue(By select, String text) {
         CommonMethod.sleep(2000);
         CommonMethod.selectValueMethod(select, text);
         driver.findElement(QueryScreenWallPage.SHOWCLEAR).click();
         CommonMethod.sleep(2000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-       /* String value=(String)js.executeScript("var select=document.getElementsByTagName(\"select\")[0];var index = " +
-                "select.selectedIndex;var value = select.options[index].text; return value;");//获取当前下拉框显示值*/
+        String value=CommonMethodService.selectGetValue(select);
+       /* JavascriptExecutor js = (JavascriptExecutor) driver;
+       *//* String value=(String)js.executeScript("var select=document.getElementsByTagName(\"select\")[0];var index = " +
+                "select.selectedIndex;var value = select.options[index].text; return value;");//获取当前下拉框显示值*//*
         String value=(String)js.executeScript("document.querySelectorAll('select.form-control')[0]. options[document.querySelectorAll" +
                 "('select.form-control')[0].selectedIndex].text");
-        System.out.println(value);
+        System.out.println(value);*/
         Assert.assertEquals(value, "全部");
 
-    }
+    }/*
+    * 下拉框下拉值清空
+    * */
     public static void clearSelectChangeValue(By select, String text) {
         CommonMethod.sleep(2000);
         CommonMethod.selectValueMethod(select, text);
         driver.findElement(QueryScreenWallPage.SHOWCLEAR).click();
-        CommonMethod.sleep(2000);
+       /* CommonMethod.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
        String value=(String)js.executeScript("var select=document.getElementsByName(\"seek_wfStatus\");" +
                "var index = select.selectedIndex;var value = select.options[index].text; return value;");//获取当前下拉框显示值
-        /*String value=(String)js.executeScript("document.querySelectorAll('select.form-control')[0]. options[document.querySelectorAll" +
+        *//*String value=(String)js.executeScript("document.querySelectorAll('select.form-control')[0]. options[document.querySelectorAll" +
                 "('select.form-control')[0].selectedIndex].text");*/
+        CommonMethod.sleep(2000);
+        String value=CommonMethodService.selectGetValue(select);
         Assert.assertEquals(value, "全部");
 
     }
+    /*
+    * 下拉框日期清空
+    * */
     public static void clearTimeService(int start,int end,int index,String starttime,String endtime){
         CommonMethod.sleep(2000);
         List<WebElement> time =driver.findElements(By.className("el-input__inner"));

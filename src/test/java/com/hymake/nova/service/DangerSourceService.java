@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class DangerSourceService  extends CommonMethod{
     private static Logger logger= Logger.getLogger(ScreenWallService.class);
+    //危险源新增方法
     public static void addDangerSource(String path, By mc){
         CommonMethod.sleep(5000);
         CommonMethodService.projectManage(DangerSourcePage.DANGERM,DangerSourcePage.DANGERREGISTER);
@@ -52,6 +53,7 @@ public class DangerSourceService  extends CommonMethod{
         int t=Integer.parseInt(total);
         return t;
     }*/
+   //危险源删除方法
     public static void deleteDanger(){
         try {
             Thread.sleep(3000);
@@ -85,6 +87,7 @@ public class DangerSourceService  extends CommonMethod{
 
 
     }
+    //撤回方法校验
     public static void recallServer(){
         driver.findElement(DangerSourcePage.HAVEITEM).click();
         try {
@@ -102,17 +105,21 @@ public class DangerSourceService  extends CommonMethod{
 
 
     }
-    public static void clearServer(String text) {
-        CommonMethod.selectValueMethod(DangerSourcePage.DANGERSOURCETYPE,text);//选择下拉值
+    //清空方法校验
+    public static void clearServer(By select,String text) {
+        CommonMethod.selectValueMethod(select,text);//选择下拉值
         driver.findElement(DangerSourcePage.INEMPTY).click();//点击清空按钮
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+       /* JavascriptExecutor js = (JavascriptExecutor) driver;
        String value=(String)js.executeScript("var select=document.getElementsByTagName(\"select\")[1];var index = " +
-                "select.selectedIndex;var value = select.options[index].text; return value;");//获取当前文本框
+                "select.selectedIndex;var value = select.options[index].text; return value;");//获取当前文本框*/
+        CommonMethod.sleep(2000);
+        String value=CommonMethodService.selectGetValue(select);
         Assert.assertEquals(value,"全部");
 
 
 
     }
+    //查看详情，获取json文件，根据显示值进行读取，判断是否跟json里面的值一致
     public static void dangerDetail(String pathfile){
         CommonMethod.sleep(2000);
         CommonMethodService.listData(CommonPage.TR,0);
@@ -148,6 +155,7 @@ public class DangerSourceService  extends CommonMethod{
         CommonMethodService.listData(CommonPage.BUTTON,5);
 
     }
+    //必选提示校验
     public static void buttonServer(){
         try {
             Thread.sleep(3000);

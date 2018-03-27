@@ -22,13 +22,14 @@ import java.util.Date;
 public class CreateElementScreenshot extends CommonMethod{
     private static org.apache.log4j.Logger logger= org.apache.log4j.Logger.getLogger(ScreenWallService.class);
     //public static WebDriver driver= DriverManager.getDriver();
-
+    //时间格式转换
     public static String getCurrentSystemTime() {
         Date now = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH点mm分ss秒");
         String time = dateFormat.format(now);
         return(time);
     }
+    //截图方法
     public static void takeScreenshotByName(WebDriver driver) {
         DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
         Calendar calendar = Calendar.getInstance();
@@ -41,6 +42,7 @@ public class CreateElementScreenshot extends CommonMethod{
             e.printStackTrace();
         }
     }
+    //异常截图
     public static String  errorScreenshot(WebDriver driver,String path,String pictureFormat){
         String systemTime = CreateElementScreenshot.getCurrentSystemTime();
         String pictureName = systemTime + pictureFormat ;

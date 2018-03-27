@@ -54,6 +54,7 @@ public class CreatScreenWall extends CommonMethod{
         CommonMethod.sleep(3000);
         CommonMethodService.listData(CommonPage.PROMPT,1);
     }
+    //外窗幕墙新增方法并判断
     public static void  createWindow(int i,String pathfile){
         CommonMethod.sleep(3000);
         int t=CommonMethod.count(DangerSourcePage.COUNT);
@@ -69,6 +70,7 @@ public class CreatScreenWall extends CommonMethod{
         int t1=CommonMethod.count(DangerSourcePage.COUNT);
         Assert.assertEquals(t1,t+1);
     }
+    //读取json文件，并对相应的类型进行判断操作
     public static void commonWall(String pathfile){
 
             String path = System.getProperty("user.dir");//获取当前路径

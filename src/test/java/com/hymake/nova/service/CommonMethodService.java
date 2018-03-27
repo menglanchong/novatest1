@@ -4,6 +4,7 @@ import com.hymake.nova.page.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -85,7 +86,6 @@ public class CommonMethodService extends CommonMethod{
     }
     public static void listData(By elment,int index){
         CommonMethod.sleep(4000);
-
         List<WebElement> first= driver.findElements(elment);
         //driver.switchTo().frame(first.get(1)); 如果多个iframe id或者其他的定位方式相同，可以用这种方式定位
         first.get(index).click();
@@ -122,6 +122,10 @@ public class CommonMethodService extends CommonMethod{
         }
 
     }
+    /**
+     * 项目管理下的二级菜单
+     */
+
     public static void  projectManage(By secondMenu,By threeMenu){
         CommonMethod.sleep(5000);
         CommonMethod.findElement(DangerSourcePage.PROJECT).click();
@@ -133,6 +137,9 @@ public class CommonMethodService extends CommonMethod{
 
 
     }
+    /**
+     * 项目管理下的一级菜单
+     */
     public static void  Manage(By secondMenu){
         CommonMethod.sleep(5000);
         CommonMethod.findElement(DangerSourcePage.PROJECT).click();
@@ -143,6 +150,9 @@ public class CommonMethodService extends CommonMethod{
 
 
     }
+    /**
+     * 施工安全考评下的二级菜单
+     */
     public static void safetyProject2(By menu,By by){
         CommonMethod.findElement(SafetyPage.SAFETY).click();
         CommonMethod.sleep(2000);
@@ -151,7 +161,9 @@ public class CommonMethodService extends CommonMethod{
         driver.findElement(by).click();//点击三级菜单
         CommonMethod.sleep(2000);
 
-    }
+    }/**
+     * 施工安全考评下的三级菜单
+     */
     public static void safetyProject3(By menu,By by,By four){
         CommonMethod.findElement(SafetyPage.SAFETY).click();
         CommonMethod.sleep(2000);
@@ -161,6 +173,16 @@ public class CommonMethodService extends CommonMethod{
         CommonMethod.sleep(2000);
         driver.findElement(four).click();//点击4级菜单
         CommonMethod.sleep(2000);
+
+    }
+    /**
+     * 下拉框获取选中值的方法
+     */
+    public static String selectGetValue(By by){
+        WebElement element=driver.findElement(by);
+        Select select=new Select(element);
+        String value=select.getFirstSelectedOption().getText();
+        return value;
 
     }
 
