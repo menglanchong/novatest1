@@ -46,7 +46,7 @@ public class QuerySafetyBuilderTest {
     public static void QuarterStateTest(){
         LoginTest.loginBuilder();
         SafetyService.commonMethod(SafetyPage.SAFETYPROJECT, SafetyPage.QUARTERCHECK);
-        QueryService.QueryText(SafetyPage.OPSTATE,"未登记",8);
+        QueryService.QuerySelectText(SafetyPage.OPSTATE,"未登记",8);
     }
     @Test(description = "项目月自评查询年份")
     public static void MonthQueryTest(){
@@ -263,16 +263,19 @@ public class QuerySafetyBuilderTest {
     }
     @Test(description = "重新申请安全生产标准化考评地市查询")
     public static void realpplyArea(){
+        LoginTest.loginBuildProj();
         SafetyService.commonMethod(SafetyPage.COMPANY,SafetyPage.REAPPLYQUERY);
         QueryService.QuerySelectText(SafetyPage.AREA,"福州市",4);
     }
     @Test(description = "重新申请安全生产标准化考评许可证查询")
     public static void realpplyLicens(){
+        LoginTest.loginBuildProj();
         SafetyService.commonMethod(SafetyPage.COMPANY,SafetyPage.REAPPLYQUERY);
         QueryService.QueryText(SafetyPage.LICENSENUM,"000",1);
     }
     @Test(description = "省级优良项目申报登记项目查询")
     public static void applicationUndeclared(){
+        LoginTest.loginBuildProj();
         SafetyService.commonMethod3(SafetyPage.GOODPROJECT,SafetyPage.PROVINCE,SafetyPage.GOODDECLARE);
         QueryService.QueryText(SafetyPage.PROJECTNAME2,"厦门",0);
 
@@ -280,14 +283,27 @@ public class QuerySafetyBuilderTest {
     }
     @Test(description = "省级优良项目创建工程汇总表项目查询")
     public static void applicationSum(){
+        LoginTest.loginBuildProj();
         SafetyService.commonMethod3(SafetyPage.GOODPROJECT,SafetyPage.PROVINCE,SafetyPage.GOODSUM);
         QueryService.QueryText(SafetyPage.PROJECTNAME,"稀土",0);
 
     }
-    @Test(description = "省级优良项目创建工程汇总表项目查询")
+    @Test(description = "省级优良项目创建工程汇总表地市查询")
     public static void applicationPrpjstate(){
+        LoginTest.loginBuildProj();
         SafetyService.commonMethod3(SafetyPage.GOODPROJECT,SafetyPage.PROVINCE,SafetyPage.GOODSUM);
+        QueryService.QuerySelectText(SafetyPage.AREA,"福州市",3);
 
+    }
+    @Test(description = "省级优良项目创建工程汇总表告知时间查询")
+    public static void applicationTimeTest(){
+        LoginTest.loginBuilder();
+        SafetyService.commonMethod3(SafetyPage.GOODPROJECT,SafetyPage.PROVINCE,SafetyPage.GOODSUM);
+        try {
+            QueryService.QuerySelectTime("2017-12-28","2017-12-29",SafetyPage.PROJECTNAME,15);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
     }
     @AfterMethod

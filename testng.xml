@@ -6,13 +6,13 @@
 
   </listeners>
   <test name="novatest">
-    <!--packages>
+    <packages>
       <package name="com.hymake.nova.test"/>
-    </packages-->
-    <classes>
+    </packages>
+    <!--classes>
       <class name="com.hymake.nova.test.ClearMaterialTest"/>
 
-    </classes>
+    </classes-->
 
   </test>
   <!--suite-files>

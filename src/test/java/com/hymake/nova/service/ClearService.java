@@ -170,14 +170,14 @@ public class ClearService extends CommonMethod{
 
     }
     /*
-    * 下拉框日期清空
+    * 日期清空
     * */
     public static void clearTimeService(int start,int end,int index,String starttime,String endtime){
         CommonMethod.sleep(2000);
         List<WebElement> time =driver.findElements(By.className("el-input__inner"));
         time.get(start).sendKeys(starttime);
         time.get(end).sendKeys(endtime);
-        CommonMethodService.listData(CommonPage.TEXT,0);
+        CommonMethodService.listData(CommonPage.TEXT,index);
         driver.findElement(QueryScreenWallPage.SHOWCLEAR).click();
         //driver.findElement(clear).click();
        String actualstart= time.get(start).getText();

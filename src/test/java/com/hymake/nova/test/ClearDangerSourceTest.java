@@ -31,6 +31,7 @@ public class ClearDangerSourceTest {
         //调用登录方法
         LoginTest.login();
     }
+
     @Test(description = "项目管理页面项目名称清空")
     public static void clearProject(){
 

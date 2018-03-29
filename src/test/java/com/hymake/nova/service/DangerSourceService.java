@@ -99,7 +99,7 @@ public class DangerSourceService  extends CommonMethod{
         driver.findElement(DangerSourcePage.FIRSTPROJECT).click();
         driver.findElement(DangerSourcePage.HAVERECALL).click();
         driver.findElement(DangerSourcePage.HAVESURE).click();
-        CommonMethod.sleep(4000);
+        CommonMethod.sleep(5000);
         int t1= count(DangerSourcePage.COUNT);
         Assert.assertEquals(t1,t-1);
 
